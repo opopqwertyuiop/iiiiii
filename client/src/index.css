@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+   /* min-height: 100%; */
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   color: rgb(38, 38, 38, 1);
+   font-size: 14px;
+   line-height: 1.2;
+   background: rgb(250, 250, 250);
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* a:active {
+   opacity: 0.5;
+} */
+
+.container {
+   max-width: 935px;
+   padding: 0 15px;
+   margin: 0 auto;
+   width: 100%;
+   position: relative;
+}
+
+.App {
+   height: 100%;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.btn.disabled {
+   opacity: 0.3;
+}
+
+.content {
+   flex-grow: 1;
+}
+
+.main {
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footer {
+   padding: 38px 20px;
+}
+
+.footer-nav {
+   max-width: 1150px;
+   margin: 0 auto;
+}
+
+.footer-ul {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.footer a {
+   text-transform: uppercase;
+   text-decoration: none;
+   color: rgb(0, 55, 107);
+   font-size: 12px;
+   font-weight: 600;
+}
+
+.footer-li {
+   list-style-type: none;
+   text-decoration: none;
+   margin-bottom: 7px;
+   margin-right: 17px;
+}
+
+.auth-wrapper {
+   max-width: 380px;
+   margin: 0 auto;
+   margin-top: 12px;
+   padding: 0 15px;
+}
+
+.auth-section {
+   padding: 10px 40px;
+   margin-bottom: 10px;
+   border: 1px solid rgb(219, 219, 219);
+   background: #ffffff;
+}
+
+.auth-section.reg {
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
+.auth-title {
+   font-family: 'Grand Hotel';
+   text-align: center;
+   font-size: 50px;
+   margin: 22px 0 12px;
+}
+
+.auth-form-title {
+   text-align: center;
+   color: rgb(142, 142, 142);
+   font-size: 17px;
+}
+
+.auth-form-field {
+   margin-bottom: 6px;
+}
+
+.auth-form-input {
+   width: 100%;
+   padding: 9px 8px 7px 8px;
+   font-size: 12px;
+   background: rgb(250, 250, 250);
+   border: 1px solid rgb(219, 219, 219);
+}
+
+.auth-form-input:active,
+.auth-form-input:focus {
+   border: 1px solid rgb(168, 168, 168) !important;
+   outline: 0;
+}
+
+/* .reg-btn-wrapper {
+} */
+
+.btn {
+   background: #0095f6;
+   border: 1px solid transparent;
+   border-radius: 4px;
+   padding: 5px 9px;
+   cursor: pointer;
+   width: 100%;
+   color: #ffffff;
+   font-weight: bold;
+   line-height: 18px;
+   margin: 8px 0;
+}
+
+.btn.loading {
+   opacity: 0.5;
+}
+
+.btn:active {
+   opacity: 0.5;
+   outline: 0;
+}
+
+.privacy-policy {
+   color: rgb(142, 142, 142);
+   font-size: 12px;
+   line-height: 16px;
+   margin: 0 10px 20px;
+   text-align: center;
+}
+
+.privacy-policy a {
+   text-decoration: none;
+   color: #8e8e8e;
+   font-weight: 600;
+   /* font-weight: bold; */
+}
+
+.privacy-policy a:active {
+   color: rgba(142, 142, 142, 0.5);
+}
+
+.have-account {
+   text-align: center;
+   margin: 15px 0;
+}
+
+.have-account a {
+   color: rgb(0, 149, 246);
+   text-decoration: none;
+}
+
+.have-account a:active {
+   opacity: 0.5;
+}
+
+.auth-errors {
+   text-align: center;
+   margin: 10px 0;
+   padding: 0;
+   font-size: 14px;
+   color: rgb(237, 73, 86);
+}
+
+.auth-errors {
+   list-style-type: none;
+}
+
+.auth-error {
+}
+
+.header {
+   background: #ffffff;
+   border: 1px solid rgb(219, 219, 219);
+   position: relative;
+}
+
+.header-link {
+   color: inherit;
+   text-decoration: none;
+}
+
+.header-nav {
+   display: flex;
+   align-items: center;
+}
+
+.header-title {
+   font-family: 'Grand Hotel';
+   font-size: 50px;
+   margin: 0;
+}
+
+.header-actions {
+   margin: 0;
+   padding: 0;
+   margin-left: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header-action {
+   list-style-type: none;
+   margin-left: 23px;
+   cursor: pointer;
+}
+
+.header-action a.active svg {
+   fill: rgb(0, 0, 0);
+}
+
+.header-aciton:last-child {
+   margin-left: 0;
+   width: 1000px;
+}
+
+.header-action.profile {
+   /* position: relative; */
+}
+
+.header-action.profile span {
+   display: inline-block;
+   width: 23px;
+   height: 23px;
+}
+
+.header-action.profile span img {
+   max-width: 100%;
+   width: 23px;
+   height: 23px;
+   border-radius: 50%;
+}
+
+.header .profile-menu {
+   position: absolute;
+   right: 15px;
+   top: 100%;
+   margin: 0;
+   padding: 0;
+   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+   border-radius: 6px;
+   min-width: 150px;
+   z-index: 15;
+}
+
+.header .profile-menu .profile-menu-item {
+   list-style-type: none;
+   padding: 8px 16px;
+   vertical-align: middle;
+   background: #ffffff;
+}
+
+.header .profile-menu .profile-menu-item:last-child {
+   border-top: 1px solid rgb(219, 219, 219);
+}
+
+.header .profile-menu .profile-menu-item:hover {
+   background: rgb(238, 238, 238);
+}
+
+.settings-wrapper {
+   margin-top: 30px;
+   width: 100%;
+   display: flex;
+   background: #ffffff;
+   border: 1px solid rgb(219, 219, 219);
+   border-radius: 3px;
+}
+
+.settings-navbar {
+   width: 30%;
+   margin: 0;
+   padding: 0;
+   border-right: 1px solid rgb(219, 219, 219);
+}
+/*  */ /*p*/
+.settings-item {
+   list-style-type: none;
+   padding: 16px 16px 16px 30px;
+   border-left: 2px solid transparent;
+   font-size: 16px;
+}
+
+.settings-item:hover {
+   background: rgb(250, 250, 250);
+   border-left: 2px solid rgb(238, 238, 238);
+}
+
+.settings-navbar .active .settings-item {
+   font-weight: bold;
+   border-left-color: rgb(38, 38, 38);
+}
+
+.settings-content {
+   width: 70%;
+}
+
+.change-avatar {
+   margin-top: 32px;
+}
+
+.edit-form {
+   margin: 16px 0;
+}
+
+.edit-form-label {
+   display: inline-block;
+   width: 180px;
+   text-align: right;
+   font-weight: bold;
+   font-size: 16px;
+   margin-right: 26px;
+}
+
+.edit-form-input {
+   border: 1px solid rgba(219, 219, 219, 1);
+   border-radius: 3px;
+   color: rgba(38, 38, 38, 1);
+   font-size: 16px;
+   padding: 0 10px;
+   width: 100%;
+   height: 32px;
+}
+
+.edit-form-field {
+   margin-bottom: 16px;
+   display: flex;
+   padding-right: 30px;
+}
+
+.edit-form-input-wrapper {
+   max-width: 500px;
+   width: 100%;
+}
+
+.edit-form-field:last-child {
+   margin-bottom: 0px;
+}
+
+.edit-form .btn {
+   width: auto;
+   margin-left: 160px;
+}
+
+.change-avatar {
+   display: flex;
+}
+
+.change-avatar-right {
+   width: 100%;
+}
+
+.change-avatar-img {
+   width: 180px;
+   margin-right: 26px;
+   height: 41px;
+   border-radius: 50%;
+   text-align: right;
+   position: relative;
+}
+
+.change-avatar-img img {
+   width: 41px;
+   height: 41px;
+   border-radius: 50%;
+}
+
+.change-avatar-login {
+   font-size: 20px;
+   line-height: 22px;
+   margin-bottom: 2px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   margin: 0;
+}
+
+.change-avatar-btn {
+   border: 0;
+   background: 0;
+   border: 0;
+   color: #0095f6;
+   color: rgba(0, 149, 246, 1);
+   font-weight: 600;
+   display: inline;
+   padding: 0;
+   position: relative;
+}
+
+.edit .change-avatar-img img {
+   cursor: pointer;
+}
+
+.edit .change-avatar-btn {
+   cursor: pointer;
+}
+
+.change-img-loader {
+   width: 41px;
+   height: 41px;
+   position: absolute;
+   border-radius: 50%;
+   background: rgba(0, 0, 0, 0.5);
+   right: 0;
+   top: 0;
+}
+
+.change-img-loader::before {
+   content: '';
+   display: block;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 41px;
+   height: 41px;
+   border-radius: 50%;
+   border: 5px solid transparent;
+   border-top-color: #ffffff;
+   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
